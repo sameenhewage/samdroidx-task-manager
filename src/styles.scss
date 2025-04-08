@@ -13,4 +13,10 @@
 
 body {
   background-color: color-variables.$background-color;
+  min-height: 100vh;
+  min-height: 100dvh; /* For mobile browsers */
+
+  .layout-container {
+    display: grid;
+  }
 }
