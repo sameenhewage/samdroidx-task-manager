@@ -1,3 +1,24 @@
 .sidebar-container {
-  background: #33caf0;
+  background: #ffffff;
+  height: 100%;
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem 1rem 1rem;
+  .user-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .profile-picture {
+      width: 65px;
+      height: 65px;
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+    .title {
+    }
+    .name {
+      font-weight: 600;
+    }
+  }
 }

@@ -1,0 +1,74 @@
+@use "./color-variables.scss" as *; // or specify path to your color variables file
+
+// Text color utilities
+.text-primary {
+  color: $text-primary;
+}
+.text-secondary {
+  color: $text-secondary;
+}
+.text-accent-green {
+  color: $accent-green;
+}
+.text-accent-orange {
+  color: $accent-orange;
+}
+.text-accent-red {
+  color: $accent-red;
+}
+.text-primary-dark {
+  color: $primary-dark;
+}
+.text-white {
+  color: $white-text;
+}
+
+// Background color utilities
+.bg-primary {
+  background-color: $primary;
+}
+.bg-primary-dark {
+  background-color: $primary-dark;
+}
+.bg-secondary {
+  background-color: $secondary;
+}
+.bg-secondary-light {
+  background-color: $secondary-light;
+}
+.bg-accent-green {
+  background-color: $accent-green;
+}
+.bg-accent-orange {
+  background-color: $accent-orange;
+}
+.bg-accent-red {
+  background-color: $accent-red;
+}
+.bg-card {
+  background-color: $card-background;
+}
+.bg-page {
+  background-color: $background;
+}
+
+// Border color utilities
+.border-default {
+  border: 1px solid $border;
+}
+.border-primary {
+  border: 1px solid $primary;
+}
+.border-accent-green {
+  border: 1px solid $accent-green;
+}
+.border-accent-red {
+  border: 1px solid $accent-red;
+}
+
+// Font size utilities
+.small {
+  font-size: 12px;
+  color: #7d8083;
+  font-weight: 500;
+}

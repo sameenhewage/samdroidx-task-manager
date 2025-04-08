@@ -1,8 +1,14 @@
-// color variables
-@use "./styles/color-variables";
+//utilities
+@use "./styles/utils.scss";
 
 // fonts
 @use "./styles/fonts.scss";
+
+//spacing
+@use "./styles/margin-padding.mixing" as spacing;
+
+@include spacing.generate-spacing(margin, m);
+@include spacing.generate-spacing(padding, p);
 
 * {
   margin: 0;
@@ -12,7 +18,6 @@
 }
 
 body {
-  background-color: color-variables.$background;
   min-height: 100vh;
   min-height: 100dvh; /* For mobile browsers */
 }

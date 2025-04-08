@@ -1,0 +1,36 @@
+// Mixin to generate spacing utility classes
+@mixin generate-spacing($property, $prefix) {
+  $directions: "", "t", "r", "b", "l", "x", "y";
+  $values: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10; // You can add more like 6, 7, 8...
+
+  @each $val in $values {
+    $space: $val * 0.25rem; // You can change unit scale here
+
+    // Full property (e.g., .m-1 or .p-1)
+    .#{$prefix}-#{$val} {
+      #{$property}: #{$space};
+    }
+
+    @each $dir in $directions {
+      $suffix: if($dir == "", "", "-" + $dir);
+
+      .#{$prefix}#{$suffix}-#{$val} {
+        @if $dir == "t" {
+          #{$property}-top: #{$space};
+        } @else if $dir == "r" {
+          #{$property}-right: #{$space};
+        } @else if $dir == "b" {
+          #{$property}-bottom: #{$space};
+        } @else if $dir == "l" {
+          #{$property}-left: #{$space};
+        } @else if $dir == "x" {
+          #{$property}-left: #{$space};
+          #{$property}-right: #{$space};
+        } @else if $dir == "y" {
+          #{$property}-top: #{$space};
+          #{$property}-bottom: #{$space};
+        }
+      }
+    }
+  }
+}
