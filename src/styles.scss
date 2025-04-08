@@ -1,7 +1,7 @@
 // color variables
 @use "./styles/color-variables";
 
-//fonts
+// fonts
 @use "./styles/fonts.scss";
 
 * {
@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: color-variables.$background-color;
+  background-color: color-variables.$background;
   min-height: 100vh;
   min-height: 100dvh; /* For mobile browsers */
 }
