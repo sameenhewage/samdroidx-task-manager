@@ -24,9 +24,16 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
+              "src/assets/fonts",
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/fonts/poppins",
+                "output": "/assets/fonts/poppins/"
               }
             ],
             "styles": ["src/styles.scss"],
