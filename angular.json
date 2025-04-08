@@ -25,15 +25,14 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/assets",
-              "src/assets/fonts",
               {
                 "glob": "**/*",
                 "input": "public"
               },
               {
-                "glob": "**/*",
-                "input": "src/assets/fonts/poppins",
-                "output": "/assets/fonts/poppins/"
+                "glob": "**/*.ttf",
+                "input": "src/assets/fonts",
+                "output": "/assets/fonts/"
               }
             ],
             "styles": ["src/styles.scss"],
