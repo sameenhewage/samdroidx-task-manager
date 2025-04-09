@@ -1,1 +1,16 @@
-<p>sidebar-nav works!</p>
+<nav class="sidebar-nav">
+  <ul>
+    @for (item of navItems(); track item.path) {
+    <li>
+      <a
+        [routerLink]="item.path"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <span class="material-symbols-outlined"> {{ item.icon }} </span>
+        <span>{{ item.label }}</span>
+      </a>
+    </li>
+    }
+  </ul>
+</nav>

@@ -1,0 +1,13 @@
+<div [style.color]="filterColor() ?? '#000'">
+  <img
+    [src]="'assets/icons/svg/' + name() + '.svg'"
+    [alt]="name()"
+    [style.width.px]="size()"
+    [style.height.px]="size()"
+    [ngStyle]="{
+      filter: filterColor()
+        ? 'drop-shadow(0 0 0 ' + filterColor() + ')'
+        : 'none'
+    }"
+  />
+</div>

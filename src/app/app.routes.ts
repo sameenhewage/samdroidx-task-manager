@@ -13,4 +13,11 @@ export const routes: Routes = [
         (m) => m.DashboardComponent
       ),
   },
+  {
+    path: 'manage-tasks',
+    loadComponent: () =>
+      import('./features/components/manage-task/manage-task.component').then(
+        (m) => m.ManageTaskComponent
+      ),
+  },
 ];
