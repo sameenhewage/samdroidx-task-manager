@@ -1,10 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  computed,
-  OnInit,
-  signal,
-} from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { getNavItems } from '../../constants/navigation';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
