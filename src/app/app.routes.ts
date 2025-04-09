@@ -20,4 +20,11 @@ export const routes: Routes = [
         (m) => m.ManageTaskComponent
       ),
   },
+  {
+    path: 'create-task',
+    loadComponent: () =>
+      import(
+        './features/components/tasks/create-task/create-task.component'
+      ).then((m) => m.CreateTaskComponent),
+  },
 ];

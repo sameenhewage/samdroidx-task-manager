@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SvgIconComponent } from './svg-icon.component';
+import { CreateTaskComponent } from './create-task.component';
 
-describe('SvgIconComponent', () => {
-  let component: SvgIconComponent;
-  let fixture: ComponentFixture<SvgIconComponent>;
+describe('CreateTaskComponent', () => {
+  let component: CreateTaskComponent;
+  let fixture: ComponentFixture<CreateTaskComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SvgIconComponent]
+      imports: [CreateTaskComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SvgIconComponent);
+    fixture = TestBed.createComponent(CreateTaskComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -7,8 +7,10 @@
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
       >
-        <span class="material-symbols-outlined"> {{ item.icon }} </span>
-        <span>{{ item.label }}</span>
+        <span class="icon material-symbols-outlined m-r-3">
+          {{ item.icon }}
+        </span>
+        <span class="label">{{ item.label }}</span>
       </a>
     </li>
     }
