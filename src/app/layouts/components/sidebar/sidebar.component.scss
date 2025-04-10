@@ -2,20 +2,42 @@
   background: #ffffff;
   height: 100%;
   box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
-  // padding: 0 1rem 1rem 1rem;
-  .user-details-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  .sidebar-user-info {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .profile-picture {
-      img {
-        border-radius: 50%;
-      }
+      border-radius: 50%;
+      object-fit: cover;
+      width: 80px;
+      height: 80px;
     }
-    .title {
+
+    app-role-title {
+      margin-top: 0.5rem;
     }
-    .name {
+
+    .user-name {
       font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    .user-email {
+      font-size: 0.875rem;
+      color: #666;
+    }
+  }
+
+  .sidebar-navigation-container {
+    margin-top: 2rem;
+
+    app-sidebar-nav {
+      width: 100%;
     }
   }
 }

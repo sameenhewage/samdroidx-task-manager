@@ -1,28 +1,28 @@
-<div class="sidebar-container">
-  <div class="user-details-container p-t-4">
-    <div class="profile-picture">
+<aside class="sidebar-container">
+  <!-- User Info Section -->
+  <section class="sidebar-user-info p-t-4">
+    <div class="sidebar-user-profile d-flex flex-column align-items-center">
       <img
-        ngSrc="assets/images/users/user1.jpg"
-        alt=""
-        srcset=""
+        [ngSrc]="'assets/images/users/user1.jpg'"
+        alt="User profile picture"
         width="80"
         height="80"
         priority="high"
+        class="profile-picture"
       />
-    </div>
-    <div class="title m-t-2">
-      <app-role-title [roleTitle]="roleTitle()"></app-role-title>
-    </div>
-    <div class="name m-t-2">
-      <p>Mike</p>
-    </div>
-    <div class="email small">
-      <p>fM1o7&#64;example.com</p>
-    </div>
-  </div>
 
-  <!-- sidebar navigation -->
-  <div class="sidebar-navigation-container m-t-4">
+      <app-role-title [roleTitle]="roleTitle()" class="m-t-2"> </app-role-title>
+
+      <p class="user-name m-t-2">Mike</p>
+      <p class="user-email small">fM1o7&#64;example.com</p>
+    </div>
+  </section>
+
+  <!-- Navigation Section -->
+  <nav
+    class="sidebar-navigation-container m-t-4"
+    aria-label="Sidebar navigation"
+  >
     <app-sidebar-nav></app-sidebar-nav>
-  </div>
-</div>
+  </nav>
+</aside>
