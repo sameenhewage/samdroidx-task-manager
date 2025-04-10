@@ -7,6 +7,9 @@
 //spacing
 @use "./styles/margin-padding.mixing" as spacing;
 
+//alignment classes
+@use "./styles/flex.scss";
+
 @include spacing.generate-spacing(margin, m);
 @include spacing.generate-spacing(padding, p);
 

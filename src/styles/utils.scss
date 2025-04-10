@@ -75,3 +75,17 @@
   color: #7d8083;
   font-weight: 500;
 }
+
+// task colors
+.pending {
+  background-color: $pending;
+}
+.inprogress {
+  background-color: $inprogress;
+}
+.completed {
+  background-color: $completed;
+}
+.total {
+  background-color: $total;
+}
