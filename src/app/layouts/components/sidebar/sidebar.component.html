@@ -1,7 +1,14 @@
 <div class="sidebar-container">
   <div class="user-details-container p-t-4">
     <div class="profile-picture">
-      <img src="assets/images/users/user1.jpg" alt="" srcset="" />
+      <img
+        ngSrc="assets/images/users/user1.jpg"
+        alt=""
+        srcset=""
+        width="80"
+        height="80"
+        priority="high"
+      />
     </div>
     <div class="title m-t-2">
       <app-role-title [roleTitle]="roleTitle()"></app-role-title>
