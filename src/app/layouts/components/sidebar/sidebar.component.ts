@@ -10,5 +10,5 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrl: './sidebar.component.scss',
 })
 export class SidebarComponent {
-  roleTitle = signal<string>('Admin');
+  roleTitle = signal<string>('admin');
 }

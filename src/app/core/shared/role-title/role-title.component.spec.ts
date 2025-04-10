@@ -8,11 +8,11 @@ describe('RoleTitleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RoleTitleComponent]
-    })
-    .compileComponents();
+      imports: [RoleTitleComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(RoleTitleComponent);
+    fixture.componentRef.setInput('roleTitle', 'admin');
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
