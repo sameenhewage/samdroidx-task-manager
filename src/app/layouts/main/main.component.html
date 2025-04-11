@@ -5,10 +5,14 @@
 
   <aside
     class="app-sidebar"
-    [class.open]="navigationMenuShowHideService.isSidebarActive()"
-    [class.close]="!navigationMenuShowHideService.isSidebarActive()"
+    [class.open]="isMobile() && isSidebarActive()"
+    [class.close]="isMobile() && !isSidebarActive()"
     [@fadeSidebar]="
-      navigationMenuShowHideService.isSidebarActive() ? 'visible' : 'hidden'
+      isMobile()
+        ? navigationMenuShowHideService.isSidebarActive()
+          ? 'visible'
+          : 'hidden'
+        : 'visible'
     "
   >
     <app-sidebar></app-sidebar>
@@ -23,7 +27,7 @@
   </footer>
 
   <!-- Overlay -->
-  @if (navigationMenuShowHideService.isSidebarActive()) {
+  @if (isMobile() && isSidebarActive()) {
   <div
     class="overlay"
     (click)="navigationMenuShowHideService.toggleSidebar()"

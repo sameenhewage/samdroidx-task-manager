@@ -34,4 +34,7 @@ import {
 })
 export class MainComponent {
   navigationMenuShowHideService = inject(NavigationMenuShowHideService);
+
+  isSidebarActive = this.navigationMenuShowHideService.isSidebarActive;
+  isMobile = this.navigationMenuShowHideService.isMobile;
 }

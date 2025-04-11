@@ -16,5 +16,13 @@ export class NavigationMenuShowHideService {
     this._isSidebarActive.set(!this._isSidebarActive());
   }
 
-  constructor() {}
+  private _isMobile = signal<boolean>(window.innerWidth <= 991.98);
+
+  isMobile = computed(() => this._isMobile());
+
+  constructor() {
+    window.addEventListener('resize', () => {
+      this._isMobile.set(window.innerWidth <= 991.98);
+    });
+  }
 }
