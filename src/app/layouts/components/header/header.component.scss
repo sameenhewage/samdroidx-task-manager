@@ -11,4 +11,10 @@
     font-weight: 600;
     font-size: large;
   }
+  #hamburger-menu {
+    display: none;
+    @media (max-width: 991.98px) {
+      display: inline-block;
+    }
+  }
 }
