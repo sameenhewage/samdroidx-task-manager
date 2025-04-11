@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SidebarNavComponent } from './sidebar-nav.component';
 import { provideRouter, Routes } from '@angular/router';
-import { DashboardComponent } from '../../../features/components/dashboard/dashboard.component';
+import { DashboardComponent } from '../../../../features/components/dashboard/dashboard.component';
 
 describe('SidebarNavComponent', () => {
   let component: SidebarNavComponent;

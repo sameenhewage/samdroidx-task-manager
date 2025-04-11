@@ -1,7 +1,7 @@
 import { Component, computed, signal } from '@angular/core';
-import { getNavItems } from '../../constants/navigation';
-import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { getNavItems } from '../../../constants/navigation';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar-nav',

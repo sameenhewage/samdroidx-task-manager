@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
-import { RoleTitleComponent } from '../../../core/shared/role-title/role-title.component';
-import { SidebarNavComponent } from '../../../core/shared/sidebar-nav/sidebar-nav.component';
+import { RoleTitleComponent } from '../../../core/shared/components/role-title/role-title.component';
 import { NgOptimizedImage } from '@angular/common';
+import { SidebarNavComponent } from '../../../core/shared/components/sidebar-nav/sidebar-nav.component';
 
 @Component({
   selector: 'app-sidebar',
