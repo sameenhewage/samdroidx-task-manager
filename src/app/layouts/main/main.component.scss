@@ -47,6 +47,7 @@
     grid-template-columns: 1fr;
 
     aside {
+      transition: all 0.3s ease-in-out;
       position: fixed;
       top: calc(60px + 8px); // height of the header 8px for gap
       width: 250px;

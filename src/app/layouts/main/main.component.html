@@ -7,6 +7,9 @@
     class="app-sidebar"
     [class.open]="navigationMenuShowHideService.isSidebarActive()"
     [class.close]="!navigationMenuShowHideService.isSidebarActive()"
+    [@fadeSidebar]="
+      navigationMenuShowHideService.isSidebarActive() ? 'visible' : 'hidden'
+    "
   >
     <app-sidebar></app-sidebar>
   </aside>
