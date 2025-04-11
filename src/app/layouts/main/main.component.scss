@@ -1,4 +1,5 @@
 .layout-container {
+  position: relative;
   display: grid;
   grid-template-areas:
     "header header header"
@@ -12,23 +13,27 @@
 
   header {
     grid-area: header;
+    z-index: 1000;
   }
 
   aside {
     grid-area: sidebar;
     // background-color: rgb(136, 214, 219);
+    z-index: 1000;
   }
 
   main {
     grid-area: content-area;
     height: 100%;
     padding: 1.5rem;
+    z-index: 999;
     // background-color: rgb(131, 80, 226);
   }
 
   footer {
     grid-area: footer;
     // background-color: rgb(226, 54, 149);
+    z-index: 999;
   }
 }
 
@@ -43,14 +48,29 @@
 
     aside {
       position: fixed;
-      top: 60px; // height of the header
-      left: 0;
+      top: calc(60px + 8px); // height of the header 8px for gap
       width: 250px;
       height: calc(100% - 60px);
       background: white;
-      z-index: 1000;
+      z-index: 1001;
       transform: translateX(-100%);
       box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+      &.open {
+        left: 250px;
+      }
+      &.close {
+        left: 0;
+      }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 60px);
+      background-color: rgba(0, 0, 0, 0.5); // transparent black
+      z-index: 1000;
     }
   }
 }

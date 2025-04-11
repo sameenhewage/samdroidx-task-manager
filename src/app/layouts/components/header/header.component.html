@@ -1,6 +1,25 @@
 <div class="header-container">
-  <span class="material-symbols-outlined m-r-3" id="hamburger-menu">
-    menu
-  </span>
+  <div class="mobile-nav">
+    <div class="mobile-nav-container">
+      @if (navigationMenuShowHideService.isSidebarActive()) {
+      <span
+        class="material-symbols-outlined m-r-3 cursor-hand"
+        id="close-menu"
+        (click)="navigationMenuShowHideService.toggleSidebar()"
+      >
+        close
+      </span>
+      } @else{
+      <span
+        class="material-symbols-outlined m-r-3 cursor-hand"
+        id="hamburger-menu"
+        (click)="navigationMenuShowHideService.toggleSidebar()"
+      >
+        menu
+      </span>
+      }
+    </div>
+  </div>
+
   <p>{{ title() }}</p>
 </div>

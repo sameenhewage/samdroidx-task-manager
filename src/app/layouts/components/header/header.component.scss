@@ -11,8 +11,12 @@
     font-weight: 600;
     font-size: large;
   }
-  #hamburger-menu {
+  .mobile-nav {
     display: none;
+    .mobile-nav-container {
+      display: flex;
+      align-items: center;
+    }
     @media (max-width: 991.98px) {
       display: inline-block;
     }

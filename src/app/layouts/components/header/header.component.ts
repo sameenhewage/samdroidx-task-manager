@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { NavigationMenuShowHideService } from '../../../core/shared/services/navigation-menu-show-hide.service';
 
 @Component({
   selector: 'app-header',
@@ -8,4 +9,6 @@ import { Component, signal } from '@angular/core';
 })
 export class HeaderComponent {
   title = signal<string>('Task Manager');
+
+  navigationMenuShowHideService = inject(NavigationMenuShowHideService);
 }

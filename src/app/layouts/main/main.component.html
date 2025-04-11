@@ -3,7 +3,11 @@
     <app-header></app-header>
   </header>
 
-  <aside class="app-sidebar">
+  <aside
+    class="app-sidebar"
+    [class.open]="navigationMenuShowHideService.isSidebarActive()"
+    [class.close]="!navigationMenuShowHideService.isSidebarActive()"
+  >
     <app-sidebar></app-sidebar>
   </aside>
 
@@ -14,4 +18,12 @@
   <footer class="app-footer">
     <app-footer></app-footer>
   </footer>
+
+  <!-- Overlay -->
+  @if (navigationMenuShowHideService.isSidebarActive()) {
+  <div
+    class="overlay"
+    (click)="navigationMenuShowHideService.toggleSidebar()"
+  ></div>
+  }
 </div>
